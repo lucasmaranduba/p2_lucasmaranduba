@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<form method="POST">
+    <div>
+        Nome: <input name="nome" value="<%=contato.nome %>" />
+    </div>
+    <div>
+        E-mail: <input name="email" value="<%=contato.email %>" />
+    </div>
+    <div>
+        Telefone: <input name="Telefone" value="<%=contato.telefone %>" />
+    </div>
+    <div>
+        Rede Social: <input name="rede_social" value="<%=contato.rede_social %>" />
+    </div>
+    <input type="submit" value="Salvar" />
+    <input type="hidden" value=value="<%=contato.id %>" />
+</form>
+

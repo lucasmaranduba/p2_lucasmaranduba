@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<a href="/index"><h1>Inicio</h1></a>
+<hr>
+<h1>Contatos</h1>
+<hr>
+
+
+<a href="/formContato" ><button type="button" class="btn btn-primary btn-lg btn-block">Incluir</button></a>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>E-mail</td>
+        <td>Telefone</td>
+        <td>Rede Social</td>
+    </tr>
+    <% contato.forEach(function(item){ %>
+    <tr>
+        <td><%= item.id %></td>
+        <td><%= item.nome %></td>
+        <td><%= item.email %></td>
+        <td><%= item.telefone %></td>
+        <td><%= item.rede_social %></td>
+        <td>
+            <a href="/atualizarContato?id=<%= item.id %>"><button type="button" class="btn btn-primary btn-lg btn-block">Atualizar</button></a>
+        </td>
+        <td>
+            <a href="/excluirContato?id=<%= item.id %>" onClick="return confirm('Confirma a exclusão?')"><button type="button" class="btn btn-primary btn-lg btn-block">Excluir</button></a>
+        </td>
+    </tr>
+    <% }) %>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+
